@@ -1,0 +1,22 @@
+- unless @followed.size == 0
+  %section#new-follows
+    %h2 You've started following&hellip;
+    - @followed.each do |follow|
+      %a.profile.row-fluid{:href => "http://twitter.com/#{follow.screen_name}"}
+        %img.span3{:src => follow.profile_image_url}
+        %div.span9
+          %div.name= follow.name
+          %div.screen_name= "@" + follow.screen_name.downcase
+  - unless @already_following.size == 0
+    %section.existing-follows
+      %h2 And you're already following&hellip;
+      = succeed '.' do
+        = @already_following.join(', ')
+
+- else
+  %section.no-follows
+    <strong>Hrm</strong>, looks like you're already following everybody:
+    - @already_following.each_with_index do |account, index|
+      = succeed (index < (@already_following.length - 1)) ? ', ' : '.' do
+        %a{:href => "http://twitter.com/#{account}"} @#{account}
+

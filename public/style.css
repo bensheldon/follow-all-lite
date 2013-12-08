@@ -1,0 +1,77 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+#content {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+#current-user {
+  font-style: italic;
+  text-align: right;
+  font-size: 13px;
+  color: #888;
+}
+
+i[class^=icon-] {
+  margin-right: 0.5em;
+}
+
+p#description {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+a.profile {
+  display: block;
+  border-bottom: 1px solid #aaa;
+  padding: 10px;
+  margin: 10px 0;
+  color: #333;
+}
+
+a.profile:hover div {
+  text-decoration: underline;
+}
+
+a.profile:last-child {
+  border-bottom: none;
+}
+
+a.profile img {
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+a.profile div.name {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 979px) {
+  body {
+    margin-top: 20px;
+  }
+}

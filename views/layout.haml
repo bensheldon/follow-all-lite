@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %meta{ :charset => "utf-8"}
+    %title
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %link{ :href => "/vendor/bootstrap/css/bootstrap.min.css", :rel => "stylesheet"}
+    %link{ :href => "/style.css", :rel => "stylesheet" }
+    %link{ :href => "/vendor/bootstrap/css/bootstrap-responsive.min.css", :rel => "stylesheet" }
+    %link{ :href => "/vendor/font-awesome/css/font-awesome.min.css", :rel => "stylesheet" }
+  %body
+    %div#content
+      - if @user
+        %div#current-user
+          %p
+            Logged in as @#{@user}&hellip;
+            = succeed '.' do
+              %a{:href => '/logout'} log out
+      %image#logo{:src => "/logo.png"}
+      = yield
+
+
+    %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" }
+    %script window.jQuery || document.write('<script src="/vendor/jquery-1.9.0.min.js"><\/script>')
+    %script{ :src => "/app.js" }

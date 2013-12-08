@@ -1,0 +1,11 @@
+#welcome
+  - if @user
+    %form#follow{ :action => "/follow", :method => "post" }
+      %button.btn.btn-block.btn-success{:type => "submit"}
+        %i.icon-heart
+        Follow Everyone
+  - else
+    %a.btn.button-link.btn-block.btn-primary{ :href => "/twitter-connect" } <i class="icon-random"></i> Login with Twitter
+
+%p#description
+  This app will automatically cause <strong>you</strong> to follow #{@to_follow.map{|screen_name| "@#{screen_name}" }.join(', ')}.
